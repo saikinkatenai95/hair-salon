@@ -1,0 +1,578 @@
+body{
+  background-color: #111211;
+}
+
+.wrapper{
+   background-color:#111211;
+}
+
+.header{
+  background-color:#e9ede8;
+  width: 100%;
+  height: 8vh;
+  color:#111211;
+  position: relative;
+  position: fixed;
+  z-index: 999;
+}
+
+.logo{
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  left: 2vh;
+}
+
+.header-concept{
+  width: 40%;
+  font-size: 180%;
+  font-weight: 600;
+  margin: 2vh 0vh 0vh 13vh
+}
+
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position:fixed;
+  z-index: 999;
+  /*ナビのスタート位置と形状*/
+top:-120%;
+  left:0;
+width:100%;
+  height: 100vh;/*ナビの高さ*/
+background:#999;
+  /*動き*/
+transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+  top: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999; 
+  width: 100%;
+  height: 100vh;/*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+list-style: none;
+  text-align: center; 
+}
+
+#g-nav li a{
+color: #333;
+text-decoration: none;
+padding:10px;
+display: block;
+text-transform: uppercase;
+letter-spacing: 0.1em;
+font-weight: bold;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn{
+position:fixed;
+  z-index: 9999;/*ボタンを最前面に*/
+top: 17px;
+right: 20px;
+cursor: pointer;
+  width: 50px;
+  height:50px;
+}
+
+/*×に変化*/	
+.openbtn span{
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+background-color: #666;
+  width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+top:31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+/*--------------------------*/
+
+.slider{
+  width: 100%;
+  height: 375px;
+  text-align: center;
+  color:#e9ede8;
+}
+
+.concept{
+  text-align: center;
+  color:#e9ede8;
+  font-family: serif;
+}
+
+.concept-title{
+  background-color:#111211;
+  width: 100%;
+  height: 120px;
+  color:#e0e0dc;
+}
+
+.concept-main{
+  background-color:#111211;
+  width: 100%;
+  height: 365px;
+  text-align: center;
+  color:#e0e0dc;
+  border-bottom: 1px solid #e9ede8;
+}
+
+.instagram{
+  text-align: center;
+  width: 100%;
+  color:#e9ede8;
+  font-family: serif;
+}
+
+.instagram-title{
+  background-color: #111211;
+  width: 100%;
+  /* height: 152px; */
+  text-align: center;
+  color:#e9ede8;
+  padding-top: 40px;
+}
+
+.instagram-main{
+  background-color:#111211;
+  width: 100%;
+  text-align: center;
+  color:#e9ede8;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding-top: 20px;
+}
+
+.cutmodel01{
+  width: 60%;
+  height: 100%;
+  margin-top: 40px;
+}
+
+.cutmodel02{
+  width: 60%;
+  height: 100%;
+  margin-top: 40px;
+}
+
+.cutmodel03{
+  width: 60%;
+  height: 100%;
+  margin-top: 40px;
+}
+
+h4{
+  margin-top: 14px;
+}
+
+.top_button_area{
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.btn_under{
+  font-size: 100%;
+    color: #e9ede8;
+    text-align: center;
+    padding: 7px 0px;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    border: 1px #e9ede8 solid;
+    border-radius: 50px;
+    font-family: serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.footer{
+  background-color:#111211;
+  width: 100%;
+  height: 100%;
+  color:#e9ede8;
+}
+
+.info{
+  background-color:#111211;
+  width: 100%;
+  margin-top: 160px;
+  color:#e9ede8;
+}
+
+.info-main{
+  background-color:#e9ede8;
+  width: 100%;
+  height: 165px;
+  color:#111211;
+}
+
+.info-wrapper{
+  display: flex;
+  height: 100%;
+}
+
+.info-box{
+  width: 33%;
+  display: flex;
+  margin-left: 120px;
+  align-items: center;
+}
+
+
+.info-image{
+  width: 20%;
+}
+
+.tel-logo{
+  width: 100%;
+  height: 100%;
+}
+
+.info-subtitle{
+  font-size: 120%;
+  font-weight: 600;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding-left: 5px;
+  border-left:1px solid #111211;
+}
+
+.googlemap{
+  background-color:#111211;
+  width: 100%;
+  height: 500px;
+  text-align: center;
+  color:#e9ede8;
+  margin-top: 30px;
+}
+
+.guide{
+  text-align: center;
+  color:#e9ede8;
+}
+
+.guide-under-area{
+  height: 300px;
+  border-bottom: #e9ede8 1px solid;
+}
+
+.guide-main{
+  height: 50px;
+  background-color:#111211;
+  /* text-align: center;
+  color:#e9ede8;
+  text-decoration: none; */
+  margin-top: 10px;
+}
+
+.link-btn{
+  color: #e9ede8;
+  text-align: center;
+  text-decoration: none;
+  padding: 0px 20px;
+  font-family: serif;
+  font-size: 100%;
+}
+
+.copyright{
+  color: #e9ede8;
+  font-size: 80%;
+  padding-bottom: 40px;
+}
+
+/* ------sliderのcss------------ */
+.slider {
+  position:relative;
+z-index: 1;
+/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+height: 85vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+/*背景画像設定*/
+
+.slider-item01 {
+  background:url(image/salon-image4.jpg);
+}
+
+.slider-item02 {
+  background:url(image/salon-image2.jpg);
+}
+
+.slider-item03 {
+  background:url(image/salon-image1.jpg);
+}
+
+.slider-item {
+  width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+  height:85vh;/*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+  background-repeat: no-repeat;/*背景画像をリピートしない*/
+  background-position: center;/*背景画像の位置を中央に*/
+  background-size: 40%;/*背景画像が.slider-item全体を覆い表示*/
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+  position: absolute;/*絶対配置にする*/
+z-index: 3;
+  top: 42%;
+  cursor: pointer;/*マウスカーソルを指マークに*/
+  outline: none;/*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #ccc;/*矢印の色*/
+  border-right: 2px solid #ccc;/*矢印の色*/
+  height: 25px;
+  width: 25px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+  left:2.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+  right:2.5%;
+  transform: rotate(45deg);
+}
+
+
+/* ---system.index--- */
+.system{
+  background-color:#111211;
+  color:#e9ede8;  
+  font-family: serif;
+}
+
+.system-title{
+  height: 110px;
+  padding-top: 120px;
+  color:#e9ede8;
+  text-align: center;
+  font-size: 160%;
+  font-weight: 600;
+}
+
+.system-sub-title{
+  height: 110px;
+  color:#e9ede8;
+  text-align: center;
+  font-size: 50%;
+  font-weight: 600;
+}
+
+.system-main{
+  width: 100%;
+  display: flex;
+  padding-top: 120px;
+}
+
+.system-box{
+  width: 1200px;
+  height:440px;
+  color:#e9ede8;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+}
+
+.system-content{
+  width: 50%;
+  height: 210px;
+  padding: 0px 20px;
+}
+
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+table th, table td{
+  width: 50%;
+  border: 1px solid #e9ede8;
+  padding: 15px 10px;
+  text-align: left;
+  font-size: 80%;
+  vertical-align: middle;
+  word-break: break-all;
+  box-sizing: border-box;
+}
+
+table th{
+  background-color:#e9ede8;
+  color: #111211;
+  font-size: 100%;
+  text-align: center;
+}
+
+.other-base{
+  width: 1200px;
+  color:#e9ede8;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.other{
+  width: 50%;
+  padding-left: 20px;
+}
+
+.other-title{
+  border-bottom: 1px solid #e9ede8;
+}
+
+.other-content{
+  margin-top: 30px;
+}
+
+
+.card-list{
+  width: 42px;
+  display: flex;
+}
+
+.card-logo{
+  width: 50px;
+  height: 42px;
+  padding: 8px 0px 0px 4px;
+}
+
+
+
+/* ---coupon.index--- */
+
+.coupon{
+  background-color:#111211;
+  height: 500px;
+  color:#e9ede8;
+  font-family: serif;
+}
+
+.coupon-title{
+  height: 110px;
+  padding-top: 100px;
+  color:#e9ede8;
+  text-align: center;
+  font-size: 160%;
+  font-weight: 600;
+}
+
+.coupon-sub-title{
+  color:#e9ede8;
+  text-align: center;
+  font-size: 50%;
+  font-weight: 600;
+}
+
+.coupon-box{
+  background-color:#111211;
+  width: 100%;
+  /* height: 390px; */
+  display: flex;
+  color:#e9ede8;
+  margin-top: 80px;
+}
+
+.coupon-image{
+  background-color:#111211;
+  /* height: 390px; */
+  width: 40%;
+  color:#e9ede8;
+  margin: 0 auto;
+}
+
+.coupon-logo{
+  width: 60%;
+  height: 50%;
+  margin: 60px 0px 0px 240px;
+  align-items: center;
+}
+
+.coupon-concept{
+  background-color:#111211;
+  height: 390px;
+  width: 50%;
+  color:#e9ede8;
+  padding: 50px 0px 0px 100px;
+}
+
+/*---------staff list----------*/
+
+.sns-btn{
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.instagram-logo{
+  width: 10%;
+  height: 85%;
+}
+
+.line-logo{
+  width: 10%;
+  height: 85%;
+  margin-left: 10px;
+}
