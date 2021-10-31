@@ -428,7 +428,7 @@ z-index: 3;
 
 .system-box{
   width: 1200px;
-  height:440px;
+  height:500px;
   color:#e9ede8;
   display: flex;
   flex-wrap: wrap;
@@ -454,7 +454,7 @@ table th, table td{
   border: 1px solid #e9ede8;
   padding: 15px 10px;
   text-align: left;
-  font-size: 80%;
+  font-size: 100%;
   vertical-align: middle;
   word-break: break-all;
   box-sizing: border-box;
